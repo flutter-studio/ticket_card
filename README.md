@@ -1,14 +1,52 @@
+English | [简体中文](./README_zh-CN.md)
+
 # ticket_card
+
+[![pub package](https://img.shields.io/pub/v/ticket_card.svg)](https://pub.dartlang.org/packages/ticket_card)
 
 A ticket-style card
 
-## Getting Started
+## Usage
+To use this plugin, add `ticket_card` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## Widget
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+### TicketCard
+
+| Prop                 | Description                                                                                                                                                                               |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| lineFromTop  | The distance from the top of the divider |
+| lineRadius | The radius of the rounded corners on either side of the divider |
+| decoration | Ticket-style card decorator |
+| child | A child component of a ticket card |
+
+
+## Example
+
+``` dart
+// Import package
+import 'package:ticket_card/ticket_card.dart';
+import 'package:flutter/material.dart';
+
+            TicketCard(
+              decoration: TicketDecoration(
+                shadow: [TicketShadow(color: Colors.black, elevation: 6)],
+                border: TicketBorder(
+                  color: Colors.green,
+                  width: 0.1,
+                  style: TicketBorderStyle.dotted
+                )
+              ),
+              lineFromTop: 100,
+              child: Container(
+                height: 200,
+                width: 200,
+                color: Colors.white,
+                child: Text(
+                  "sdfsf",
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
+            )
+```
+
