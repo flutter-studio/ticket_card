@@ -45,18 +45,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,27 +56,83 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: TicketCard(
-          lineFromTop: 300,
-          child: Container(
-            color: Colors.grey.shade300,
-            height: 400,
-            width: 200,
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: TicketCard(
+              decoration: TicketDecoration(
+                  shadow: [TicketShadow(color: Colors.grey, elevation: 6)]),
+              lineFromTop: 150,
+              child: Container(
+                width: double.infinity,
+                color: Colors.grey.shade300,
+                height: 500,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Container(
+                      height: 140,
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: <Widget>[
+                                  Text(
+                                    "复仇者联盟4:终局之战",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text("2019-11-21 19:00 开始，成龙耀莱影城（板前店），六号激光厅"),
+                                  Text(
+                                    "6排7座",
+                                    style: TextStyle(color: Colors.grey),
+                                  )
+                                ],
+                              ),
+                            ),
+                            AspectRatio(
+                              aspectRatio: 1,
+                              child: Container(color: Colors.grey),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.only(top: 20),
+                        child: Column(
+                          children: <Widget>[
+                            Text(
+                              "扫码入场",
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 30,
+                            ),
+                            Container(
+                              height: 150,
+                              width: 150,
+                              color: Colors.grey,
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
