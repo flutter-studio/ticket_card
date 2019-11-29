@@ -6,6 +6,10 @@ English | [简体中文](./README_zh-CN.md)
 
 A ticket-style card
 
+<div align=left>
+<img src="https://github.com/flutter-studio/ticket_card/blob/master/scree_shot.jpg" width = "280"  alt="图片名称" align=center />
+  </div>
+
 ## Usage
 To use this plugin, add `ticket_card` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 

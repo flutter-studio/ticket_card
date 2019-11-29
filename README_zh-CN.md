@@ -6,6 +6,10 @@
 
 一个票据样式的卡片
 
+<div align=left>
+<img src="https://github.com/flutter-studio/ticket_card/blob/master/screen_shot.jpg" width = "280"  alt="图片名称" align=center />
+  </div>
+
 
 ## 使用
 要使用此插件包,请将`ticket_card`作为依赖项添加到您的`pubspec.yaml`文件中,详见[dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
