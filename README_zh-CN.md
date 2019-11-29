@@ -53,4 +53,3 @@ import 'package:flutter/material.dart';
               ),
             )
 ```
-### 特别感谢react-native-vector-icons插件包及其开发者们
