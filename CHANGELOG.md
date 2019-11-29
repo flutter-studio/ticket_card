@@ -1,3 +1,8 @@
-## [0.0.1] - TODO: Add release date.
+## 0.1.0+1
 
-* TODO: Describe initial release.
+* Optimize the description
+
+
+## 0.1.0
+
+* a ticket-style card

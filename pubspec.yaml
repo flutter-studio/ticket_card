@@ -1,8 +1,8 @@
 name: ticket_card
-description: A ticket-style card
-version: 0.0.1
-author:
-homepage:
+description: A ticket-like card widget that we can use to create something like a train or movie ticket interface
+version: 0.1.0+1
+author: flutter-studio<2534290808@qq.com>
+homepage: https://github.com/flutter-studio/ticket_card.git
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
