@@ -196,6 +196,10 @@ class TicketDecoration {
     this.shadow = const [],
     this.border,
   });
+
+  /// 卡片背景阴影
   final List<TicketShadow> shadow;
+
+  /// 卡片的边框
   final TicketBorder border;
 }
