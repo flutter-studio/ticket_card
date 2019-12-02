@@ -10,6 +10,7 @@ class TicketCard extends StatelessWidget {
   TicketCard({
     this.lineFromTop = 0,
     this.lineRadius = 10,
+    this.lineColor,
     this.child,
     this.decoration,
   });
@@ -24,6 +25,9 @@ class TicketCard extends StatelessWidget {
 
   /// 票式卡片的装饰器
   final TicketDecoration decoration;
+
+  /// 分割线颜色
+  final Color lineColor;
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +44,7 @@ class TicketCard extends StatelessWidget {
         clipper: clipper,
         fromTop: lineFromTop,
         radius: lineRadius,
+        color: lineColor
       ),
       painter: ShadowPainter(clipper: clipper, decoration: decoration),
     );
@@ -135,6 +140,7 @@ class SeparatorPainter extends CustomPainter {
     this.clipper,
     this.fromTop,
     this.radius,
+    this.color,
   });
   final CustomClipper<Path> clipper;
 
@@ -143,11 +149,13 @@ class SeparatorPainter extends CustomPainter {
   ///距离顶部的高度
   final double fromTop;
 
+  final Color color;
+
   @override
   void paint(Canvas canvas, Size size) {
     if (fromTop == 0) return;
     Paint paint = Paint()
-      ..color = Colors.red
+      ..color = color ?? Colors.red
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1;
     Path path = Path()
