@@ -21,6 +21,7 @@ To use this plugin, add `ticket_card` as a [dependency in your pubspec.yaml file
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | lineFromTop  | The distance from the top of the divider |
 | lineRadius | The radius of the rounded corners on either side of the divider |
+| lineColor  | The color of the dividing line |
 | decoration | Ticket-style card decorator |
 | child | A child component of a ticket card |
 
